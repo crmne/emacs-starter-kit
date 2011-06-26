@@ -24,7 +24,12 @@
 (setq TeX-PDF-mode 't
       font-latex-fontify-sectioning 'color
       TeX-source-correlate-method 'synctex)
-(add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (TeX-source-correlate-mode)
+            (visual-line-mode)
+            (auto-fill-mode -1)
+            (highlight-keywords)))
 
 ;; Emacs Server
 (server-start)
