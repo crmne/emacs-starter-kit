@@ -16,6 +16,10 @@
 ;; TextMate-like keybindings
 (textmate-mode)
 
+;; Highlight keywords
+(defun highlight-keywords ()
+  (font-lock-add-keywords nil '(("\\<\\(FIXME\\|TODO\\|BUG\\)" 1 font-lock-warning-face t))))
+
 ;; LaTeX (AucTeX) options
 (setq TeX-PDF-mode 't
       font-latex-fontify-sectioning 'color
