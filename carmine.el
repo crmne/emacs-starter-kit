@@ -9,9 +9,9 @@
 ;; Window-system goodies
 (when window-system
   (set-default-font "Inconsolata-14")
-  (color-theme-solarized-light)
+  (color-theme-solarized-dark)
   (set-frame-size (car (frame-list)) 142 40) ;; characters wide, lines tall
-  (set-frame-position (car (frame-list)) 17 33)) ;; x y
+  (set-frame-position (car (frame-list)) 70 33)) ;; x y
 
 ;; TextMate-like keybindings
 (textmate-mode)
